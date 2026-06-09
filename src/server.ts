@@ -16,7 +16,10 @@ const app = express();
 connectDB();
 
 //middleware
-app.use(cors()); //Third party middleware
+app.use(cors({
+    origin: "https://mern-taskmanager-frontend.netlify.app/",
+    credentials: true
+})); //Third party middleware
 app.use(express.json()); //built-in middleware
 app.use("/api/auth", authRoutes); // mounting the router in main express application
 app.use("/api/test", testRoutes); // mounting the router in main express application
