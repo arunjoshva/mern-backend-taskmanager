@@ -17,7 +17,7 @@ connectDB();
 
 //middleware
 app.use(cors({
-    origin: "https://mern-taskmanager-frontend.netlify.app/",
+    origin: ["http://localhost:5173", "https://mern-taskmanager-frontend.netlify.app"],
     credentials: true
 })); //Third party middleware
 app.use(express.json()); //built-in middleware
