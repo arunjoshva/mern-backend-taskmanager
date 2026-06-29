@@ -27,7 +27,12 @@ app.use("/api/tasks", taskRoutes); // mounting the router in main express applic
 
 app.get("/", (req: Request, res: Response) => {
     res.json(
-        {message: "Task Manager API running"}
+        {   
+            sample_endpoints:{
+                register: "/api/auth/register",
+                login: "/api/auth/login"
+            },
+            message: "For other endpoints, view on github"}
     );
 });
 
